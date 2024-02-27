@@ -28,11 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.label_Display = new System.Windows.Forms.Label();
+            this.display = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.button_Plus = new System.Windows.Forms.Button();
             this.button_Dot = new System.Windows.Forms.Button();
             this.button_0 = new System.Windows.Forms.Button();
             this.button_AllClear = new System.Windows.Forms.Button();
@@ -40,7 +37,7 @@
             this.button_3 = new System.Windows.Forms.Button();
             this.button_2 = new System.Windows.Forms.Button();
             this.button_1 = new System.Windows.Forms.Button();
-            this.button_Mutiply = new System.Windows.Forms.Button();
+            this.button_Multiply = new System.Windows.Forms.Button();
             this.button_6 = new System.Windows.Forms.Button();
             this.button_5 = new System.Windows.Forms.Button();
             this.button_4 = new System.Windows.Forms.Button();
@@ -48,20 +45,22 @@
             this.button_9 = new System.Windows.Forms.Button();
             this.button_8 = new System.Windows.Forms.Button();
             this.button_7 = new System.Windows.Forms.Button();
-            this.button17 = new System.Windows.Forms.Button();
-            this.label_explain = new System.Windows.Forms.Label();
+            this.button_Plus = new System.Windows.Forms.Button();
+            this.button_equals = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label_Display
+            // display
             // 
-            this.label_Display.Font = new System.Drawing.Font("궁서체", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label_Display.Location = new System.Drawing.Point(1, 30);
-            this.label_Display.Name = "label_Display";
-            this.label_Display.Size = new System.Drawing.Size(284, 44);
-            this.label_Display.TabIndex = 0;
-            this.label_Display.Text = "0";
-            this.label_Display.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.display.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.display.Font = new System.Drawing.Font("궁서체", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.display.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.display.Location = new System.Drawing.Point(1, 27);
+            this.display.Name = "display";
+            this.display.Size = new System.Drawing.Size(284, 47);
+            this.display.TabIndex = 0;
+            this.display.Text = "0";
+            this.display.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // tableLayoutPanel1
             // 
@@ -70,7 +69,6 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.Controls.Add(this.button_Plus, 3, 3);
             this.tableLayoutPanel1.Controls.Add(this.button_Dot, 2, 3);
             this.tableLayoutPanel1.Controls.Add(this.button_0, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.button_AllClear, 0, 3);
@@ -78,14 +76,15 @@
             this.tableLayoutPanel1.Controls.Add(this.button_3, 2, 2);
             this.tableLayoutPanel1.Controls.Add(this.button_2, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.button_1, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.button_Mutiply, 3, 1);
+            this.tableLayoutPanel1.Controls.Add(this.button_Multiply, 3, 1);
             this.tableLayoutPanel1.Controls.Add(this.button_6, 2, 1);
             this.tableLayoutPanel1.Controls.Add(this.button_5, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.button_4, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.button_Divide, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.button_9, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.button_7, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.button_8, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.button_7, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.button_Plus, 3, 3);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(1, 77);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 4;
@@ -96,16 +95,6 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(284, 344);
             this.tableLayoutPanel1.TabIndex = 1;
-            // 
-            // button_Plus
-            // 
-            this.button_Plus.Location = new System.Drawing.Point(216, 261);
-            this.button_Plus.Name = "button_Plus";
-            this.button_Plus.Size = new System.Drawing.Size(65, 80);
-            this.button_Plus.TabIndex = 15;
-            this.button_Plus.Text = "+";
-            this.button_Plus.UseVisualStyleBackColor = true;
-            this.button_Plus.Click += new System.EventHandler(this.button16_Click);
             // 
             // button_Dot
             // 
@@ -145,7 +134,7 @@
             this.button_Minus.TabIndex = 11;
             this.button_Minus.Text = "-";
             this.button_Minus.UseVisualStyleBackColor = true;
-            this.button_Minus.Click += new System.EventHandler(this.button12_Click);
+            this.button_Minus.Click += new System.EventHandler(this.button_Minus_Click);
             // 
             // button_3
             // 
@@ -177,15 +166,15 @@
             this.button_1.UseVisualStyleBackColor = true;
             this.button_1.Click += new System.EventHandler(this.button_1_Click);
             // 
-            // button_Mutiply
+            // button_Multiply
             // 
-            this.button_Mutiply.Location = new System.Drawing.Point(216, 89);
-            this.button_Mutiply.Name = "button_Mutiply";
-            this.button_Mutiply.Size = new System.Drawing.Size(65, 80);
-            this.button_Mutiply.TabIndex = 7;
-            this.button_Mutiply.Text = "×";
-            this.button_Mutiply.UseVisualStyleBackColor = true;
-            this.button_Mutiply.Click += new System.EventHandler(this.button__Click);
+            this.button_Multiply.Location = new System.Drawing.Point(216, 89);
+            this.button_Multiply.Name = "button_Multiply";
+            this.button_Multiply.Size = new System.Drawing.Size(65, 80);
+            this.button_Multiply.TabIndex = 7;
+            this.button_Multiply.Text = "×";
+            this.button_Multiply.UseVisualStyleBackColor = true;
+            this.button_Multiply.Click += new System.EventHandler(this.button_Multiply_Click);
             // 
             // button_6
             // 
@@ -257,46 +246,43 @@
             this.button_7.UseVisualStyleBackColor = true;
             this.button_7.Click += new System.EventHandler(this.button_7_Click);
             // 
-            // button17
+            // button_Plus
             // 
-            this.button17.Location = new System.Drawing.Point(4, 420);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(281, 41);
-            this.button17.TabIndex = 2;
-            this.button17.Text = "=";
-            this.button17.UseVisualStyleBackColor = true;
-            this.button17.Click += new System.EventHandler(this.button17_Click);
+            this.button_Plus.Location = new System.Drawing.Point(216, 261);
+            this.button_Plus.Name = "button_Plus";
+            this.button_Plus.Size = new System.Drawing.Size(65, 80);
+            this.button_Plus.TabIndex = 15;
+            this.button_Plus.Text = "+";
+            this.button_Plus.UseVisualStyleBackColor = true;
+            this.button_Plus.Click += new System.EventHandler(this.button_Plus_Click);
             // 
-            // label_explain
+            // button_equals
             // 
-            this.label_explain.AutoSize = true;
-            this.label_explain.Location = new System.Drawing.Point(263, 9);
-            this.label_explain.Name = "label_explain";
-            this.label_explain.Size = new System.Drawing.Size(11, 12);
-            this.label_explain.TabIndex = 3;
-            this.label_explain.Text = "0";
+            this.button_equals.Location = new System.Drawing.Point(4, 420);
+            this.button_equals.Name = "button_equals";
+            this.button_equals.Size = new System.Drawing.Size(281, 41);
+            this.button_equals.TabIndex = 2;
+            this.button_equals.Text = "=";
+            this.button_equals.UseVisualStyleBackColor = true;
+            this.button_equals.Click += new System.EventHandler(this.button_equals_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(286, 467);
-            this.Controls.Add(this.label_explain);
-            this.Controls.Add(this.button17);
+            this.Controls.Add(this.button_equals);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Controls.Add(this.label_Display);
+            this.Controls.Add(this.display);
             this.Name = "Form1";
             this.Text = "Form1";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.ToolTip toolTip1;
-        private System.Windows.Forms.Label label_Display;
+        private System.Windows.Forms.Label display;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Button button_Plus;
         private System.Windows.Forms.Button button_Dot;
@@ -306,7 +292,7 @@
         private System.Windows.Forms.Button button_3;
         private System.Windows.Forms.Button button_2;
         private System.Windows.Forms.Button button_1;
-        private System.Windows.Forms.Button button_Mutiply;
+        private System.Windows.Forms.Button button_Multiply;
         private System.Windows.Forms.Button button_6;
         private System.Windows.Forms.Button button_5;
         private System.Windows.Forms.Button button_4;
@@ -314,8 +300,7 @@
         private System.Windows.Forms.Button button_9;
         private System.Windows.Forms.Button button_8;
         private System.Windows.Forms.Button button_7;
-        private System.Windows.Forms.Button button17;
-        private System.Windows.Forms.Label label_explain;
+        private System.Windows.Forms.Button button_equals;
     }
 }
 
