@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\고병석\\Desktop\\2024Study\\Class06\\Class06.csproj": {}
+    "C:\\Users\\Administrator\\Desktop\\2024Study\\Class06\\Class06.csproj": {}
   },
   "projects": {
-    "C:\\Users\\고병석\\Desktop\\2024Study\\Class06\\Class06.csproj": {
+    "C:\\Users\\Administrator\\Desktop\\2024Study\\Class06\\Class06.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\고병석\\Desktop\\2024Study\\Class06\\Class06.csproj",
+        "projectUniqueName": "C:\\Users\\Administrator\\Desktop\\2024Study\\Class06\\Class06.csproj",
         "projectName": "Class06",
-        "projectPath": "C:\\Users\\고병석\\Desktop\\2024Study\\Class06\\Class06.csproj",
-        "packagesPath": "C:\\Users\\고병석\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\고병석\\Desktop\\2024Study\\Class06\\obj\\",
+        "projectPath": "C:\\Users\\Administrator\\Desktop\\2024Study\\Class06\\Class06.csproj",
+        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Administrator\\Desktop\\2024Study\\Class06\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\고병석\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
