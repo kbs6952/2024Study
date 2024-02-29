@@ -1,0 +1,10 @@
+C:\Users\Administrator\Desktop\2024Study\DataBase_Test\bin\Debug\DataBase_Test.exe.config
+C:\Users\Administrator\Desktop\2024Study\DataBase_Test\bin\Debug\DataBase_Test.exe
+C:\Users\Administrator\Desktop\2024Study\DataBase_Test\bin\Debug\DataBase_Test.pdb
+C:\Users\Administrator\Desktop\2024Study\DataBase_Test\obj\Debug\DataBase_Test.csproj.AssemblyReference.cache
+C:\Users\Administrator\Desktop\2024Study\DataBase_Test\obj\Debug\DataBase_Test.Form1.resources
+C:\Users\Administrator\Desktop\2024Study\DataBase_Test\obj\Debug\DataBase_Test.Properties.Resources.resources
+C:\Users\Administrator\Desktop\2024Study\DataBase_Test\obj\Debug\DataBase_Test.csproj.GenerateResource.cache
+C:\Users\Administrator\Desktop\2024Study\DataBase_Test\obj\Debug\DataBase_Test.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\2024Study\DataBase_Test\obj\Debug\DataBase_Test.exe
+C:\Users\Administrator\Desktop\2024Study\DataBase_Test\obj\Debug\DataBase_Test.pdb
