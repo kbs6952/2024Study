@@ -140,17 +140,20 @@ namespace DataBase_Test
 
         private void button_Save_Click(object sender, EventArgs e)
         {
-            TextWriter writer = new StreamWriter(@"C:\새 폴더.Test.txt");
-            for (int i = 0; i<dataGridViewInfo.Rows.Count-1; i++)
-            {
-                for (int j = 0; j < dataGridViewInfo.Columns.Count; j++)
-                {
-                    writer.Write("\t" + dataGridViewInfo.Rows[i].Cells[j].Value.ToString() + "\t"+"|");
-                }
-                writer.WriteLine();
-            }
-            writer.Close();
-            MessageBox.Show("데이터가 출력되었음");
+            //TextWriter writer = new StreamWriter(@"C:\새 폴더.Test.txt");
+            //for (int i = 0; i<dataGridViewInfo.Rows.Count-1; i++)
+            //{
+            //    for (int j = 0; j < dataGridViewInfo.Columns.Count; j++)
+            //    {
+            //        writer.Write("\t" + dataGridViewInfo.Rows[i].Cells[j].Value.ToString() + "\t"+"|");
+            //    }
+            //    writer.WriteLine();
+            //}
+            //writer.Close();
+            //MessageBox.Show("데이터가 출력되었음");
+            DataManager.SaveToJson(dataGridViewInfo, @"C:\Sample\SampleJson.json", listBox.Text);
+            MessageBox.Show("Json 데이터가 저장 되었음");
+
         }
 
         private void button_Load_Click(object sender, EventArgs e)
@@ -163,6 +166,7 @@ namespace DataBase_Test
 
             DataTable dt = new DataTable("1지역");
             dt = new DataTable(listBox.Text);
+            ds.Tables.Add(dt);
 
             DataColumn columnID = new DataColumn("ID", typeof(string));
             DataColumn columnName = new DataColumn("Name", typeof(string));
@@ -174,7 +178,6 @@ namespace DataBase_Test
             dt.Columns.Add(columnRace);
             dt.Columns.Add(columnRegion);
 
-            ds.Tables.Add(dt);
             foreach(string line in lines)
             {
                 string[] values = line.Split('|');
