@@ -38,4 +38,49 @@ namespace JSON_Test
             File.WriteAllText(@"C:\Sample", jsonData);
         }
     }
+    public class DatabaseJason
+    {
+        public static void SaveJson(string filePath)
+        {
+            int[] lottos = { 3, 24, 33 };
+            DataJson dataJson = new DataJson();
+            dataJson.Name = "고병석";
+            dataJson.Age = 34;
+            dataJson.Percentage = 0.5;
+            dataJson.lottoNumber = lottos;
+
+            ObjectID newobjectID = new ObjectID();
+            newobjectID.index = 0;
+            newobjectID.objectName = "마우스";
+            dataJson.objectID = newobjectID;
+
+            string saveJson = JsonConvert.SerializeObject(dataJson);
+            File.WriteAllText(filePath,saveJson);
+
+            // 
+            
+        }
+        public static void LoadJson(string filePath)
+        {
+            string loadJson = File.ReadAllText(filePath);
+            //JsonConvert.DeserializeObject<DataJson>(loadJson);
+            DataJson json = new DataJson();
+            JsonConvert.PopulateObject(loadJson, json);
+            Console.WriteLine($"{json.Name},{json.Age}");
+
+        }
+    }
+    public class DataJson
+    {
+        public string Name;
+        public int Age;
+        public double Percentage;
+        public int[] lottoNumber;
+        public ObjectID objectID;
+    }
+    public class ObjectID
+    {
+        public int index;
+        public string objectName;
+    }
 }

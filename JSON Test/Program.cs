@@ -22,7 +22,11 @@ namespace JSON_Test
             }
 
             AttributeTest at = new AttributeTest();
-            
+
+            DatabaseJason.SaveJson(@"C:\Sample\MyJson.json");
+            DatabaseJason.LoadJson(@"C:\Sample\MyJson.json");
+
+
         }
     }
 }
